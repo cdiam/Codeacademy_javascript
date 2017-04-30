@@ -24,6 +24,20 @@ Slow down here, this can be easily confused with creating variables. Variables u
 
 How can we utilize === or !== and an if/else statement to write a program to see whether a werewolf will turn into its wolf form this evening?
 
+List of comparison operators:
+
+> Greater than
+< Less than
+<= Less than or equal to
+>= Greater than or equal to
+=== Equal to
+!== Not equal to
+
+
+
+
+"some word".substring(x, y) where x is where you start chopping and y is where you finish chopping the original string.
+
 */
 
 

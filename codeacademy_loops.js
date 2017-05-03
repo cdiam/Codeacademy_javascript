@@ -161,3 +161,57 @@ else
 {
     console.log(hits);
 }
+
+
+
+
+/*We mentioned infinite loops in the previous exercise. If you give a while loop a condition that is true
+ and you don't build in a way for that condition to possibly become false, the loop will go on forever and
+ your program will crash. No good!
+
+To prevent this from happening, you always need a way to ensure the condition between your while parentheses can change.
+
+*/
+
+understand = true;
+
+while(understand){
+	console.log("I'm learning while loops!");
+	//Change the value of 'understand' here!
+	understand = false;
+}
+
+
+
+//Remember to set your condition outside the loop!
+var times = 0
+
+var loop = function(){
+	while(times < 3 ){
+		//Your code goes here!
+
+		console.log("I'm looping!");
+		times ++;
+	}
+};
+
+loop();
+
+
+
+
+//Remember to make your condition true outside the loop!
+
+var condition = true;
+
+var soloLoop = function(){
+  //Your code goes here!
+
+  while (condition){
+
+      console.log ('Looped once!');
+      condition = false;
+  }
+};
+
+soloLoop();

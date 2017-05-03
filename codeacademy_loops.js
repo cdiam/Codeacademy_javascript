@@ -67,6 +67,10 @@ for (var i = 0; i < myPlaces.length; i++) {
 }
 
 
+
+
+
+
 var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
 
 var currentCard = 'Heart';
@@ -118,4 +122,42 @@ for (i=0; i < names.length ; i++)
 {
 
     console.log("I know someone called " + names[i]);
+}
+
+
+
+/* search for text names
+
+/*jshint multistr:true */
+
+var text = "Hello there my name  is Constantine and i will \
+like to work with you.  is name from Byzantine era";
+
+var myName = "Constantine";
+
+var hits =[];
+
+for (var i = 0 ; i < text.length ; i++)
+{
+    if ( text[i] ==="C")
+    {
+
+        for ( var j = i ; j < (myName.length + i) ; j++)
+
+            {
+
+                hits.push(text[j]);
+            }
+    }
+}
+
+if ( hits.length === 0)
+
+{
+    console.log("Your name wasn't found!");
+
+}
+else
+{
+    console.log(hits);
 }

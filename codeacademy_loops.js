@@ -109,3 +109,13 @@ for (i = 100 ; i > 0 ; i-=5)
 
     console.log(i);
 }
+
+// Click on "Stuck? Get a hint!" if you get stuck!
+
+var names = ["Mary", "Lisa", "Irina", "Sofia", "Joanna"];
+
+for (i=0; i < names.length ; i++)
+{
+
+    console.log("I know someone called " + names[i]);
+}

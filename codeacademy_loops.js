@@ -215,3 +215,29 @@ var soloLoop = function(){
 };
 
 soloLoop();
+
+
+var myCondition = true;
+
+while(myCondition){
+
+    console.log("it is true");
+
+    myCondition = false;
+
+}
+
+myArray = ['1','2','3'];
+
+for (i = 0 ; i < myArray.length ; i++ )
+{
+
+    console.log("The index is ", + i + " and the array number is " + myArray[i]);
+}
+
+
+var loopCondition = false;
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");
+} while (loopCondition);

@@ -309,3 +309,33 @@ function fac(n)
 }
 
 console.log(fac(8));
+
+
+
+var isEven = function(number)
+
+{
+  // Your code goes here!
+
+  if (isNaN(number)===true)
+  {
+
+      return("This is not a number");
+  }
+  else if (isNaN(number)===false)
+
+  {
+
+  if (number % 2 === 0 )
+  {
+
+      return true;
+  }
+  else
+  {
+
+      return false;
+  }
+
+  }
+};

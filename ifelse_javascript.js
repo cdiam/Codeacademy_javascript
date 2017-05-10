@@ -166,3 +166,82 @@ switch statements look like this:
            default:
              console.log("I don't think that's a primary color!");
          }
+
+
+/*
+
+true && true;    // => true
+true && false;   // => false
+false && true;   // => false
+false && false;  // => false
+
+
+true || true;     // => true
+true || false;    // => true
+false || true;    // => true
+false || false;   // => false
+
+
+!true;   // => false
+!false;  // => true
+
+*/
+
+
+
+var user = prompt("Question: What is your name?").toLowerCase();
+
+switch(user) {
+    case 'constantine':
+        console.log("We have the same name");
+        break;
+    case 'natalia':
+        console.log("You have the same name with my daughter");
+        break;
+    case 'eleftheria':
+        console.log("You have the same name with my wife");
+        break;
+    default:
+        console.log("We dont have a common name");
+
+
+
+}
+
+
+var user = prompt("Question: What is your name?").toLowerCase();
+
+var lastname = "Diamantis";
+
+switch(user) {
+    case 'constantine':
+        console.log("We have the same name");
+        break;
+    case 'natalia':
+         if ( user === 'natalia' || lastname ==='Diamantis'){
+
+             console.log("amazing name");
+         }
+         else
+         {
+        console.log("You have the same name with my daughter");
+         }
+
+           if ( user === 'natalia' && lastname ==='Diamantis'){
+
+             console.log("amazing name");
+         }
+         else
+         {
+        console.log("You have the same name with my daughter");
+         }
+        break;
+    case 'eleftheria':
+        console.log("You have the same name with my wife");
+        break;
+    default:
+        console.log("We dont have a common name");
+
+
+
+}

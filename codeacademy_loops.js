@@ -339,39 +339,3 @@ var isEven = function(number)
 
   }
 };
-
-
-//Objects 
-
-
-
-var object1 = {
-    team: "AEK",
-    players: 11,
-    champions: 12,
-    cups: 10
-
-};
-
-
-var object2 = {};
-
-object2.team = "Ferrari";
-object2.races = 2500;
-object2.champs = 20;
-
-var object3 = {
-
-    team: "PAOK",
-    players: 11,
-    champions: 12,
-    cups: 10
-
-
-
-
-}
-
-console.log(object1.team);
-console.log(object2.team);
-console.log(object3.team);

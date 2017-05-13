@@ -66,3 +66,15 @@ function list(friends){
     }
 
 }
+
+
+var search = function(friends) {
+    for (var key in friends) {
+        if (friends[key].firstName === "Bill" || friends[key].firstName === "Steve") {
+            console.log(friends[key]);
+            return friends[key];
+        } else {
+            console.log("couldn't find them");
+        }
+    }
+};

@@ -189,3 +189,26 @@ var bob = new Person("Bob Smith", 30);
 var susan = new Person("Susan Jordan", 25);
 // help us make george, whose name is "George Washington" and age is 275
 var george = new Person("George Washigton", 275);
+
+
+
+/*
+
+In a constructor, we don't have to define all the properties using parameters.
+Look at our new Person example on line 1, and see how we set the species to be "Homo Sapiens" (line 4).
+This means that when we create any Person, their species will be "Homo Sapiens".
+In this way, the values associated with name and age are not yet assigned, but species will always have the same value.
+
+*/
+
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+var sally = new Person("Sally Bowles", 39);
+var holden = new Person("Holden Caulfield", 16);
+console.log("sally's species is " + sally.species + " and she is " + sally.age );
+console.log("holden's species is " + holden.species + " and he is " + holden.age);

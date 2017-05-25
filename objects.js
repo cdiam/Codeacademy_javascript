@@ -252,3 +252,242 @@ var rabbit3 = new Rabbit("sleepy");
 rabbit1.describeMyself();
 rabbit2.describeMyself();
 rabbit3.describeMyself();
+
+
+
+
+
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy", 6);
+
+
+
+
+
+
+// Our Person constructor
+function Person(name,age){
+
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+
+var family = new Array();
+
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+// loop through our new array
+
+for (var i=0 ; i<4 ; i++){
+
+    console.log(family[i].name);
+
+}
+
+
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+}
+
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+// get the difference in age between alice and billy using our function
+var diff = ageDifference(alice, billy);
+
+
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+}
+
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+// get the difference in age between alice and billy using our function
+var diff = ageDifference(alice, billy);
+
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+};
+
+// Make a new function, olderAge, to return the age of
+// the older of two people
+
+var olderAge = function(person1,person2){
+
+    if (person1.age > person2.age){
+
+        return person1.age;
+
+    }
+    else if (person1.age < person2.age){
+
+        return person2.age;
+    }
+    else {
+
+        return person1.age;
+    }
+
+}
+
+// Let's bring back alice and billy to test our new function
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+console.log("The older person is " + olderAge(alice, billy));
+
+
+
+var spencer = {
+  age: 22,
+  country: "United States"
+};
+
+// make spencer2 here with constructor notation
+
+var spencer2 = new Object();
+
+spencer2.age = 22;
+spencer2.country = "United States";
+
+
+var snoopy = new Object();
+snoopy.species = "beagle";
+snoopy.age = 10;
+
+// save Snoopy's age and species into variables
+// use dot notation for snoopy's species
+var species = snoopy.species;
+
+// use bracket notation for snoopy's age
+var age = snoopy["age"];
+
+
+// 3 lines required to make harry_potter
+var harry_potter = new Object();
+harry_potter.pages = 350;
+harry_potter.author = "J.K. Rowling";
+
+// A custom constructor for book
+function Book (pages, author) {
+    this.pages = pages;
+    this.author = author;
+}
+
+// Use our new constructor to make the_hobbit in one line
+
+var the_hobbit = new Book (320, "J.R.R. Tolkien");
+
+
+
+function Circle (radius) {
+    this.radius = radius;
+    this.area = function () {
+        return Math.PI * this.radius * this.radius;
+
+    };
+    // define a perimeter method here
+    this.perimeter = function(){
+
+        return (this.radius * 2 * Math.PI);
+    }
+};
+
+
+
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+
+}
+
+var contacts = [bob, mary];
+
+console.log(contacts[1].phoneNumber);
+
+
+
+
+
+
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+// printPerson added here
+
+var printPerson = function(person){
+
+    return (person.firstName + " " + person.lastName);
+
+}
+
+console.log(printPerson(contacts[0]));
+console.log(printPerson(contacts[1]));

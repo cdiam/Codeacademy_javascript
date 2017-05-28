@@ -606,3 +606,639 @@ function add (firstName, lastName, email, phoneNumber){
 add("Me","You","email@email.com","212");
 add("C","D","emailDDD@email.com","+1212212");
 list();
+
+
+
+
+
+var james = {
+    // add properties to this object!
+
+    job: "programmer",
+    married: false
+
+
+};
+
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+}
+
+// create a "gabby" object using the Person constructor!
+
+var gabby = new Person("student", true);
+
+
+
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+    // add a "speak" method to Person!
+    this.speak = function(){
+
+        console.log("Hello!");
+    }
+
+}
+
+var user = new Person("Codecademy Student",false);
+user.speak();
+
+
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(greeting) {
+
+        console.log("Hello, I am feeling " + greeting);
+
+    }
+};
+
+james.speak("great");
+james.speak("just okay");
+
+
+
+var james = {
+job: " programmer",
+married: false,
+sayJob: function() {
+    // complete this method
+    console.log("Hi, I work as a " + this.job);
+}
+};
+
+// james' first job
+james.sayJob();
+// change james' job to "super programmer" here
+james.job="super programmer";
+
+// james' second job
+james.sayJob();
+
+
+var james = {
+    job: "programmer",
+    married: false
+};
+
+// set to the first property name of "james"
+var aProperty = "job";
+
+// print the value of the first property of "james"
+// using the variable "aProperty"
+console.log(james[aProperty]);
+
+
+/*Say we have a variable thing and we don't know what type thing is.
+We can call typeof thing to figure this out.
+Generally, the most useful types are "number," "string," "function," and of course, "object." */
+
+// complete these definitions so that they will have
+// the appropriate types
+var anObj = { job: "I'm an object!" };
+var aNumber = 42;
+var aString = "I'm a string!";
+
+console.log( typeof anObj  ); // should print "object"
+console.log( typeof aNumber ); // should print "number"
+console.log( typeof aString ); // should print "string"
+
+
+
+/*You wouldn't know it, but every object in JavaScript comes with some baggage (stay tuned for more on this!).
+Part of this baggage includes a method called hasOwnProperty. This lets us know if an object has a particular property.
+
+We show how to use hasOwnProperty in the last two lines.
+It returns true or false, based on whether an object has a certain property. */
+
+var myObj = {
+    // finish myObj
+    name: "Constantine",
+
+};
+
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+
+
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+//console.log(suitcase.shorts);
+
+if (suitcase.hasOwnProperty('shorts') === true){
+
+    console.log(suitcase.shorts);
+
+}
+else
+{
+    suitcase["shorts"] = "jean";
+
+    console.log(suitcase.shorts);
+
+}
+
+//Remember the "property" bit can be any placeholder name you like.
+
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+for (var property in nyc){
+
+    console.log(property);
+}
+
+
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+// write a for-in loop to print the value of nyc's properties
+
+for(var x in nyc){
+
+    console.log(nyc[x]);
+}
+
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Let's make bob again, using our constructor
+var bob = new Person("Bob Smith", 30);
+var susan = new Person("Susan Jordan", 35);
+
+// make your own class here
+
+function Circle(radius){
+
+    this.radius = radius;
+
+
+}
+
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+// a function that prints the name of any given person
+var printPersonName = function (p) {
+  console.log(p.name);
+};
+
+var bob = new Person("Bob Smith", 30);
+printPersonName(bob);
+
+// make a person called me with your name and age
+// then use printPersonName to print your name
+var me = new Person("Constantine", 41);
+printPersonName(me);
+
+
+// Instead of using buddy.bark to add the bark method to just the buddy object, we use Dog.prototype.bark.
+
+function Dog (breed) {
+  this.breed = breed;
+};
+
+// here we make buddy and teach him how to bark
+var buddy = new Dog("golden Retriever");
+Dog.prototype.bark = function() {
+  console.log("Woof");
+};
+buddy.bark();
+
+// here we make snoopy
+var snoopy = new Dog("Beagle");
+/// this time it works!
+snoopy.bark();
+
+
+function Cat(name, breed) {
+    this.name = name;
+    this.breed = breed;
+}
+
+// let's make some cats!
+var cheshire = new Cat("Cheshire Cat", "British Shorthair");
+var gary = new Cat("Gary", "Domestic Shorthair");
+
+// add a method "meow" to the Cat class that will allow
+// all cats to print "Meow!" to the console
+
+Cat.prototype.meow = function(){
+
+    console.log("Meow!");
+};
+
+// add code here to make the cats meow!
+cheshire.meow();
+gary.meow();
+
+
+
+// create your Animal class here
+function Animal(name,numLegs){
+
+    this.name = name;
+    this.numLegs = numLegs;
+}
+
+// create the sayName method for Animal
+
+Animal.prototype.sayName = function(){
+
+    console.log("Hi my name is " + this.name);
+}
+
+
+
+
+// provided code to test above constructor and method
+var penguin = new Animal("Captain Cook", 2);
+penguin.sayName();
+
+
+
+
+
+
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+
+// create a Penguin constructor here
+function Penguin(name, numLegs){
+
+    this.name = name ;
+    this.numLegs = numLegs;
+}
+
+
+// create a sayName method for Penguins here
+Penguin.prototype.sayName = function(){
+
+    console.log("Hi my name is " + this.name);
+};
+
+
+// our test code
+var theCaptain = new Penguin("Captain Cook", 2);
+theCaptain.sayName();
+
+
+
+
+
+// the original Animal class and sayName method
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+}
+Animal.prototype.sayName = function() {
+    console.log("Hi my name is " + this.name);
+};
+
+// define a Penguin class
+function Penguin(name){
+
+    this.name = name;
+    this.numLegs = 2;
+}
+
+// set its prototype to be a new instance of Animal
+Penguin.prototype = new Animal();
+
+var penguin = new Penguin("Constantine")
+penguin.sayName();
+
+
+
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+
+// create your Emperor class here and make it inherit from Penguin
+
+function Emperor(name){
+
+    this.name = name;
+}
+
+/*Similar to what we did in the previous exercise, make Emperor inherit
+
+from Penguin by setting the prototype of Emperor to be Penguin.
+*/
+
+Emperor.prototype = new Penguin();
+
+
+// create an "emperor" object and print the number of legs it has
+
+var emperor = new Emperor("Constantine");
+console.log(emperor.numLegs);
+
+
+// original classes
+function Animal(name, numLegs) {
+    this.name = name;
+    this.numLegs = numLegs;
+    this.isAlive = true;
+}
+function Penguin(name) {
+    this.name = name;
+    this.numLegs = 2;
+}
+function Emperor(name) {
+    this.name = name;
+    this.saying = "Waddle waddle";
+}
+
+// set up the prototype chain
+Penguin.prototype = new Animal();
+Emperor.prototype = new Penguin();
+
+var myEmperor = new Emperor("Jules");
+
+console.log(myEmperor.saying  ); // should print "Waddle waddle"
+console.log(myEmperor.numLegs  ); // should print 2
+console.log( myEmperor.isAlive ); // should print true
+
+/*In JavaScript all properties of an object are automatically public.
+Public means that they can be accessed outside the class.
+Think of these properties as the information a class is willing to share.
+
+Look at the Person class. It has 3 public properties:
+firstName,
+lastName,
+and age.
+On lines 8 and 9, we access the firstName and lastName properties of john and assign them to myFirst and myLast.
+
+Notice that we are free to access the firstName and lastName properties, which is what we mean when we say they are public.
+*/
+
+function Person(first,last,age) {
+   this.firstName = first;
+   this.lastName = last;
+   this.age = age;
+}
+
+var john = new Person('John','Smith',30);
+var myFirst = john.firstName;
+var myLast = john.lastName;
+//declare variable myAge set to the age of the john object.
+var myAge = john.age;
+
+
+// PRIVATE VARIABLES in classes
+/*he Person class has been modified to have a private variable called bankBalance.
+Notice that it looks just like a normal variable, but it is defined inside the constructor
+for Person without using this, but instead using var. This makes bankBalance a private variable. */
+
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+
+   this.getBalance = function() {
+      // your code should return the bankBalance
+      return bankBalance;
+
+   };
+}
+
+var john = new Person('John','Smith',30);
+console.log(john.bankBalance);
+
+// create a new variable myBalance that calls getBalance()
+var myBalance = john.getBalance();
+console.log(myBalance);
+
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+
+   var returnBalance = function() {
+      return bankBalance;
+   };
+
+   // create the new function here
+
+   this.askTeller = function(){
+
+        return returnBalance;
+   };
+}
+
+var john = new Person('John','Smith',30);
+console.log(john.returnBalance);
+var myBalanceMethod = john.askTeller();
+var myBalance = myBalanceMethod();
+console.log(myBalance);
+
+
+
+function Person(first,last,age) {
+   this.firstname = first;
+   this.lastname = last;
+   this.age = age;
+   var bankBalance = 7500;
+
+   this.askTeller = function(pass) {
+     if (pass == 1234) return bankBalance;
+     else return "Wrong password.";
+   };
+}
+
+var john = new Person('John','Smith',30);
+/* the variable myBalance should access askTeller()
+   with a password as an argument  */
+var myBalance = john.askTeller(1234);
+
+
+
+var languages = {
+    english: "Hello!",
+    french: "Bonjour!",
+    notALanguage: 4,
+    spanish: "Hola!"
+};
+
+// print hello in the 3 different languages
+
+for (var key in languages){
+
+    if ( typeof languages[key] === "string" ){
+
+        console.log(languages[key]);
+    }
+
+}
+
+function Dog (breed) {
+    this.breed = breed;
+};
+
+// add the sayHello method to the Dog class
+// so all dogs now can say hello
+Dog.prototype.sayHello = function(){
+
+    console.log("Hello this is a " + this.breed + " dog");
+};
+
+var yourDog = new Dog("golden retriever");
+yourDog.sayHello();
+
+var myDog = new Dog("dachshund");
+myDog.sayHello();
+
+// what is this "Object.prototype" anyway...?
+var prototypeType = typeof Object.prototype;
+console.log(prototypeType);
+
+// now let's examine it!
+var hasOwn = Object.prototype.hasOwnProperty("hasOwnProperty");
+console.log(hasOwn);
+
+
+//Grades exposed
+
+function StudentReport() {
+    this.grade1 = 4;
+    this.grade2 = 2;
+    this.grade3 = 1;
+    this.getGPA = function() {
+        return (this.grade1 + this.grade2 + this.grade3) / 3;
+    };
+}
+
+var myStudentReport = new StudentReport();
+
+for(var x in myStudentReport) {
+    if(typeof myStudentReport[x] !== "function") {
+        console.log("Muahaha! " + myStudentReport[x]);
+    }
+}
+
+console.log("Your overall GPA is " + myStudentReport.getGPA());
+
+
+//Grades are not exposed
+
+
+function StudentReport() {
+    var grade1 = 4;
+    var grade2 = 2;
+    var grade3 = 1;
+    this.getGPA = function() {
+        return (grade1 + grade2 + grade3) / 3;
+    };
+}
+
+var myStudentReport = new StudentReport();
+
+for(var x in myStudentReport) {
+    if(typeof myStudentReport[x] !== "function") {
+        console.log("Muahaha! " + myStudentReport[x]);
+    }
+}
+
+console.log("Your overall GPA is " + myStudentReport.getGPA());
+
+
+
+var cashRegister = {
+    total: 0,
+//insert the add method here
+    add: function(itemCost){
+
+        this.total += itemCost;
+
+    },
+
+
+    scan: function (item) {
+        switch (item) {
+        case "eggs":
+            this.add(0.98);
+            break;
+
+        case "milk":
+            this.add(1.23);
+            break;
+
+        //Add other 2 items here
+        case "magazine":
+            this.add(4.99);
+            break;
+
+        case "chocolate":
+            this.add(0.45);
+            break;
+
+        }
+        return true;
+    }
+};
+
+//Scan 2 eggs and 3 magazines
+
+cashRegister.scan("eggs");
+cashRegister.scan("eggs");
+cashRegister.scan("magazine");
+cashRegister.scan("magazine");
+cashRegister.scan("magazine");
+
+
+//Show the total bill
+console.log('Your bill is '+cashRegister.total);
+
+
+
+var cashRegister = {
+    total:0,
+    add: function(itemCost){
+        this.total += itemCost;
+    },
+    scan: function(item,quantity) {
+        switch (item) {
+        case "eggs": this.add(0.98 * quantity); break;
+        case "milk": this.add(1.23 * quantity); break;
+        case "magazine": this.add(4.99 * quantity); break;
+        case "chocolate": this.add(0.45 * quantity); break;
+        }
+    }
+};
+
+// scan each item 4 times
+cashRegister.scan("eggs",4);
+cashRegister.scan("milk",4);
+cashRegister.scan("magazine",4);
+cashRegister.scan("chocolate",4);
+
+//Show the total bill
+console.log('Your bill is '+cashRegister.total);

@@ -16,3 +16,7 @@ console.log('My favorite animal: ' + favoriteAnimal);
 let myName = 'Constantine';
 let myCity = 'Athens';
 console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
+
+var isArthur = false;
+
+console.log("Current weapon: " + (isArthur ? "Knife" : "Spark"));

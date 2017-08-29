@@ -17,6 +17,15 @@ let myName = 'Constantine';
 let myCity = 'Athens';
 console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
 
-var isArthur = false;
+var isArthur = true;
+var isKing = true;
 
-console.log("Current weapon: " + (isArthur ? "Knife" : "Spark"));
+console.log("Current weapon: " + (isArthur  && isKing ? "Knife" : "Spark"));
+
+
+
+ var rightNow = +new Date();
+ var endTime = +new Date();
+ var elapsedTime = endTime - rightNow;
+ console.log(elapsedTime);
+console.log(rightNow);

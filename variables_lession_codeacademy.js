@@ -198,3 +198,97 @@ if ( moonPhase === "full") {
 
   console.log("I swear I am not a werewolf");
 }
+
+
+
+// Ternary Opeator
+
+let isLocked = true;
+
+isLocked ? console.log('You will need a key to open the door.'):
+  console.log('You will not need a key to open the door.');
+
+let isCorrect = false;
+
+isCorrect? console.log('Correct!') :
+console.log('Incorrect!')
+
+
+let favoritePhrase = 'Love That!!';
+
+favoritePhrase === 'Love That!' ?console.log('I love that!'): console.log("I don't love that!");
+
+
+
+var orderCount = 0;
+
+
+
+
+const takeOrder = (topping,crustType) =>{
+
+  orderCount ++ ;
+  console.log('Order:pizza topped with' + topping + ' with ' + crustType);
+
+
+};
+
+const getSubTotal = (itemCount) =>{
+
+  return (itemCount * 7.5);
+
+};
+
+const getTax =() => {
+
+  return (getSubTotal(orderCount) * 0.06);
+};
+
+const getTotal = () => {
+
+  return(getSubTotal(orderCount) + getTax())
+};
+
+takeOrder('mushrooms','bacan');
+console.log(getSubTotal(orderCount));
+takeOrder('bacon','bread');
+console.log(getSubTotal(orderCount));
+takeOrder('olives','bacan');
+console.log(getSubTotal(orderCount));
+console.log(getTotal());
+
+
+
+
+/*Arrow Function */
+
+
+const isGreaterThan = (numberOne, numberTwo) => {
+
+  if (numberOne > numberTwo){
+
+    return true;
+  }
+  else
+    {
+      return false;
+    }
+};
+
+console.log(isGreaterThan(2,3));
+
+
+/* Scope Variables */
+
+const satellite = 'The Moon';
+
+const galaxy = 'The Milky Way';
+
+let stars = 'North Star';
+
+const myNightSky = () => {
+
+  return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
+};
+
+console.log(myNightSky());

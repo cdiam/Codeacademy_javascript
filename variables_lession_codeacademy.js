@@ -442,3 +442,135 @@ let smallerNums = nums.map(num => num - 5);
 
 // Choose a method that will return a boolean value
 nums.some(num => num < 0);
+
+
+//Objects again
+
+let person = {name : 'Constantine',
+              age  : 40
+             };
+
+console.log(person.name);
+console.log(person.age);
+
+
+
+let person = {name : 'Constantine',
+              age  : 40
+             };
+
+console.log(person['name']);
+console.log(person['age']);
+
+
+
+let person = {
+  name: 'Constantine',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Sunday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+person.hobbies = ['soccer', 'f1'];
+person.hobbies = ['soccer'];
+
+console.log(person.hobbies);
+
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Sunday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  sayHello: ()=> {
+    return 'Hello, there!';
+  }
+};
+
+
+console.log(person.sayHello());
+person.hobbies = ['soccer', 'f1'];
+person.hobbies = ['soccer'];
+
+console.log(person.hobbies);
+
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Sunday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  sayHello: function() {
+    return `Hello, my name is ${this.name}`;
+  },
+
+  sayGoodbye() {
+    return 'Goodbye!';
+  }
+
+};
+
+let friend = {
+						 name: 'Tim',
+};
+
+friend.sayHello = person.sayHello;
+
+console.log(friend.sayHello());
+
+console.log(person.sayHello());

@@ -574,3 +574,52 @@ friend.sayHello = person.sayHello;
 console.log(friend.sayHello());
 
 console.log(person.sayHello());
+
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  }
+
+};
+
+person.age = 39;
+
+
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  },
+
+  get age(){
+
+    console.log(`${this._name} is ${this._age} years old`);
+  }
+
+};
+
+person.age = 39;
+console.log(person.age)
+
+
+
+//Intensive

@@ -96,3 +96,86 @@ var laugh = function(laugh){
 }
 
 console.log(laugh(10));
+
+
+
+/*
+ * Programming Quiz: Colors of the Rainbow (6-4)
+ */
+
+var rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+
+// your code goes here
+
+rainbow.splice(2,1,"Yellow","Green","Purple");
+
+console.log(rainbow);
+
+
+
+
+/*
+ * Programming Quiz: Quidditch Cup (6-5)
+ */
+
+// your code goes here
+
+function hasEnoughPlayers(team){
+
+    if (team.length >= 7){
+
+        return true;
+    }else
+
+        {
+            return false;
+        }
+    }
+
+
+
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+
+var turnMeIntoAString = ["U", "d", "a", "c", "i", "t", "y"];
+
+console.log(turnMeIntoAString.join(''));
+
+
+words = ["cat", "in", "hat"];
+words.forEach(function(word, num, all) {
+  console.log("Word " + num + " in " + all.toString() + " is " + word);
+});
+
+
+
+
+/*
+ * Programming Quiz: Another Type of Loop (6-8)
+ *
+ * Use the existing `test` variable and write a `forEach` loop
+ * that adds 100 to each number that is divisible by 3.
+ *
+ * Things to note:
+ *  - you must use an `if` statement to verify code is divisible by 3
+ *  - you can use `console.log` to verify the `test` variable when you're finished looping
+ */
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+    19, 300, 3775, 299, 36, 209, 148, 169, 299,
+    6, 109, 20, 58, 139, 59, 3, 1, 139
+];
+
+// Write your code here
+
+test.forEach(function(number){
+
+    if ( (number % 3 ) === 0 ){
+
+        console.log("The divisible number is " + number + " and the addition is =");
+
+        number += 100 ;
+
+        console.log(number);
+    }
+});

@@ -263,3 +263,91 @@ console.log(user.email) uses dot notation to access the email property of user.
 console.log(user["email"]) uses bracket notation to access the email property of user.
 
 */
+
+
+var myObj = {
+  color: "orange",
+  shape: "sphere",
+  type: "food",
+  eat: function() { return "yummy" }
+};
+
+myObj.eat(); // method
+myObj.color; // property
+
+
+/*
+ * Programming Quiz: Menu Items (7-2)
+ */
+
+// your code goes here
+
+var breakfast = {
+
+                name: "The Lumberjack",
+                price: 9.95,
+                ingredients: ["eggs","sausage","toast","hashbrowns","pancakes"]
+
+};
+
+
+
+/*
+ * Programming Quiz: Bank Accounts 1 (7-3)
+ */
+
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    // your code goes here
+    printAccountSummary: function(){
+
+        return "Welcome!\n Your balance is currently " + savingsAccount.balance +"$ and your interest rate is "+savingsAccount.interestRatePercent + "%."
+    }
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+
+
+/*
+ * Programming Quiz: Facebook Friends (7-5)
+ */
+
+// your code goes here
+
+var facebookProfile = {
+
+        name: "Constantine",
+        friends: 15,
+        messages:["hello", "my name is", "we are here"],
+      postMessage: function(message){
+facebookProfile.messages.push(message);
+},
+
+deleteMessage: function(index){
+    facebookProfile.messages.splice(index,1);
+},
+
+addFriend: function(){
+    this.friends++;
+    return console.log(facebookProfile.friends);
+},
+removeFriend: function(){
+    facebookProfile.friends = facebookProfile.friends-1}
+
+
+
+
+};

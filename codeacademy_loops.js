@@ -339,3 +339,64 @@ var isEven = function(number)
 
   }
 };
+
+
+function useCallback(callback)
+{
+    callback(1);
+    callback(2);
+    callback(3);
+}
+
+function callback(sentence) {
+    // TODO: print out sentence
+    
+    console.log(sentence);
+}
+
+// TODO: execute useCallback with the callback as the argument
+
+useCallback(callback);
+
+
+//define the function accepting two variables (name,age)
+function Person (name, age){
+    this.name = name;
+    this.age = age;
+    //describe the class which return the following 
+      this.describe = function(){
+      return this.name +", " + this.age + " years old";
+      }
+  };
+  //create the object
+  var jack = new Person("Jack", 25);
+  var jill = new Person("Jill", 24);
+
+  //call the objects
+  console.log(jack.describe());
+  console.log(jill.describe());
+
+
+
+  var person = {
+    firstName : "John",
+    lastName : "Smith",
+    age : 23
+};
+
+function printFullName()
+{
+    console.log(this.firstName + " " + this.lastName);
+}
+
+function printDetails()
+{
+    console.log(this.firstName + " is " + this.age + " years old");
+}
+
+// TODO: create bound copies of printFullName and printDetails.
+var boundPrintFullName = printFullName.bind(person);
+var boundPrintDetails = printDetails.bind(person);
+
+boundPrintFullName();
+boundPrintDetails();
